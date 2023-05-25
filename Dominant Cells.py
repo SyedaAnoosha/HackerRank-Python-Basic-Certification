@@ -1,18 +1,18 @@
 def numCells(grid):
     # Write your code here
     
-    res = 0
+    domCell = 0
     for i in range(len(grid)):
-        for k in range (len(grid[0])):
-            val = grid[i][k]
+        for j in range (len(grid[0])):
+            val = grid[i][j]
             flag = 1
             for ii in range (max(0,i-1),min(len(grid),i+2)):
-                for kk in range(max(0,k-1),min(len(grid[0]),k+2)):
-                    if (ii,kk)!=(i,k) and val<= grid[ii][kk] :
+                for jj in range(max(0,j-1),min(len(grid[0]),j+2)):
+                    if (ii,jj)!=(i,j) and val<= grid[ii][jj] :
                          flag=0
                          break 
                 if flag == 0:
                      break
             else:
-                res+=1
-    return res
+                domCell+=1
+    return domCell
