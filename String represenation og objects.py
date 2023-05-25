@@ -20,3 +20,4 @@ class Boat:
     def __str__(self):
         return "Boat with the maximum speed of "+str(self.speed)+" knots"
     
+    
